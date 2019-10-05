@@ -3,11 +3,19 @@ using System.Collections;
 
 public class Bazooka : Weapon
 {
-    private const float MIN_EXPLOSION_FORCE = 40;
-    private const float MAX_EXPLOSION_FORCE = 70;
-    private const float CHARGE_TIME = 2;
-    private const float SLOW_MOTION_SCALE = 0.5f;
     private const string CHARGE_INPUT_NAME = "PlayerCharge";
+
+    [SerializeField]
+    private float _minExplosionForce = 40;
+
+    [SerializeField]
+    private float _maxExplosionForce = 70;
+
+    [SerializeField]
+    private float _chargeTime = 2;
+
+    [SerializeField]
+    private float _slowMotionScale = 0.5f;
 
     [SerializeField]
     private Player _player;
@@ -28,8 +36,8 @@ public class Bazooka : Weapon
 
     protected override void FireWeapon()
     {
-        Time.timeScale = SLOW_MOTION_SCALE;
-        _charger.Charge(CHARGE_TIME, CHARGE_INPUT_NAME, FireBazookaShot);        
+        Time.timeScale = _slowMotionScale;
+        _charger.Charge(_chargeTime, CHARGE_INPUT_NAME, FireBazookaShot);        
     }
 
     private void FireBazookaShot(float chargeProcentAmount)
@@ -39,7 +47,7 @@ public class Bazooka : Weapon
         Bullet spawnedBullet = Instantiate(_bulletPrefab, _spawnTransform.position, Quaternion.identity);
         bulletData.Direction = GetMouseDirection();
         bulletData.UnitDealingDamage = _player;
-        bulletData.ExplosionForce = MIN_EXPLOSION_FORCE + Mathf.Max(0, (MAX_EXPLOSION_FORCE - MIN_EXPLOSION_FORCE) * chargeProcentAmount);
+        bulletData.ExplosionForce = _minExplosionForce + Mathf.Max(0, (_maxExplosionForce - _minExplosionForce) * chargeProcentAmount);
         spawnedBullet.Init(bulletData);
     }
 

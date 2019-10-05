@@ -18,6 +18,9 @@ public class Explosion : MonoBehaviour
     [SerializeField]
     private GrowCircleCollider _growCircleCollider;
 
+    [SerializeField]
+    private GameObject _backgroundIndicatorGo;
+
     private List<UnitType> _typesCanApplyExplosionForceTo = new List<UnitType>()
     {
         UnitType.Player
@@ -41,8 +44,8 @@ public class Explosion : MonoBehaviour
         triggerNotifier.Init(unitTypesToBeNotifiedOff);
 
         triggerNotifier.UnitEntered += UnitEntered;
+        LeanTween.alpha(_backgroundIndicatorGo, 0, _growCircleCollider.GrowTime);
     }
-
 
     private void UnitEntered(UnitType unitType, Unit unit)
     {

@@ -22,11 +22,18 @@ public class UiMessageShow : MonoBehaviour
 
     private void MoveOutToRight()
     {
-        _uiLabel?.gameObject.LeanMoveLocalX(_uiLabel.rectTransform.rect.width, MOVE_IN_TIME);     
+        if(_uiLabel != null)
+        {
+            _uiLabel?.gameObject.LeanMoveLocalX(_uiLabel.rectTransform.rect.width, MOVE_IN_TIME);
+        }
+             
     }
 
     private void MoveBackToLeft()
     {
-        _uiLabel?.gameObject.LeanMoveLocalX(-_uiLabel.rectTransform.rect.width, 0);
+        if (_uiLabel != null)
+        {
+            _uiLabel?.gameObject.LeanMoveLocalX(-_uiLabel.rectTransform.rect.width, 0);
+        }
     }
 }

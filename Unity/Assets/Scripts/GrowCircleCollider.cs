@@ -19,6 +19,7 @@ public class GrowCircleCollider : MonoBehaviour
     private float _timeGone;
 
     public float GrownRadius => _grownRadius;
+    public float GrowTime => _growTime;
 
     private void Awake()
     {
