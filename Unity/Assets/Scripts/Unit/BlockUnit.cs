@@ -10,5 +10,6 @@ public class BlockUnit : Unit
     private void Awake()
     {
         TriggerNotifier triggerNotifier = _rootGo.AddComponent<TriggerNotifier>();
+        triggerNotifier.Init(new System.Collections.Generic.List<UnitType>() { UnitType.Player });
     }
 }
