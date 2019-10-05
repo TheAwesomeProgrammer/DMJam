@@ -50,7 +50,7 @@ public class Charger : MonoBehaviour
             _chargeImage.sprite = GetSpriteBasedOnFillAmount(_fillAmount);
             if (Input.GetButtonUp(_chargeInputName) || _fillAmount >= MAX_CHARGE_AMOUNT)
             {
-                _chargeEnded?.Invoke(_chargeImage.fillAmount);
+                _chargeEnded?.Invoke(_fillAmount);
                 ResetCharger();               
             }           
         }

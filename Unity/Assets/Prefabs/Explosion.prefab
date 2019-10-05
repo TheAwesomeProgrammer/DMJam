@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 670176170576482984}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 6.2212844, y: 6.2212844, z: 6.2212844}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5644824799205312361}
   m_RootOrder: 1
@@ -106,8 +106,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4955646505793126215}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.089, y: -0.081, z: 0}
-  m_LocalScale: {x: 8.388474, y: 8.388474, z: 8.388474}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5644824799205312361}
   m_RootOrder: 0
@@ -191,7 +191,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5644824799205312361}
   - component: {fileID: 5644824799205312367}
-  - component: {fileID: 5644824799205312364}
   - component: {fileID: 5644824799205312365}
   m_Layer: 0
   m_Name: Explosion
@@ -231,23 +230,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.0001
---- !u!114 &5644824799205312364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5644824799205312354}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fdb2b7587bdc74390efbfca4e5ddf8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _growTime: 1.5
-  _grownRadius: 3
-  _circleCollider2D: {fileID: 5644824799205312367}
-  _rootGo: {fileID: 5644824799205312354}
+  m_Radius: 0.5
 --- !u!114 &5644824799205312365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -260,7 +243,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01b5ce58ee49f614fabe0572898b71b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _aliveTime: 0.5
+  _forceApplyTime: 0.1
+  _circleCollider2D: {fileID: 5644824799205312367}
   _bodyTransform: {fileID: 5644824799205312361}
+  _rootTransform: {fileID: 5644824799205312361}
   _bodyGo: {fileID: 5644824799205312354}
-  _growCircleCollider: {fileID: 5644824799205312364}
+  _rootGo: {fileID: 5644824799205312354}
   _backgroundIndicatorGo: {fileID: 670176170576482984}

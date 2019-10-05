@@ -948,6 +948,10 @@ PrefabInstance:
       propertyPath: _maxExplosionForce
       value: 55
       objectReference: {fileID: 0}
+    - target: {fileID: 1614947681, guid: 76fcdb104c71a4e44a7a3b1abd62a65c, type: 3}
+      propertyPath: _recoilForce
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4409032774265756492, guid: 76fcdb104c71a4e44a7a3b1abd62a65c,
         type: 3}
       propertyPath: m_Enabled
@@ -4475,7 +4479,12 @@ PrefabInstance:
     - target: {fileID: 5049610706204411835, guid: 8be7e02505bd95a4ab9e72b8022e3d6c,
         type: 3}
       propertyPath: _maxDistance.y
-      value: 5
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5049610706204411835, guid: 8be7e02505bd95a4ab9e72b8022e3d6c,
+        type: 3}
+      propertyPath: _outOfBoxCatchUpTime
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8be7e02505bd95a4ab9e72b8022e3d6c, type: 3}

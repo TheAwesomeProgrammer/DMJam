@@ -7,8 +7,16 @@ public class Bazooka : Weapon
 
     private PlayerMovement _playerMovement;
 
+
+
     [SerializeField]
     private float _recoilForce;
+
+    [SerializeField]
+    private float _minExplosionRadius = 2;
+
+    [SerializeField]
+    private float _maxExplosionRadius = 4;
 
     [SerializeField]
     private float _minExplosionForce = 40;
@@ -59,6 +67,7 @@ public class Bazooka : Weapon
         bulletData.Direction = GetMouseDirection();
         bulletData.UnitDealingDamage = _player;
         bulletData.ExplosionForce = _minExplosionForce + Mathf.Max(0, (_maxExplosionForce - _minExplosionForce) * chargeProcentAmount);
+        bulletData.ExplosionRadius = _minExplosionRadius + Mathf.Max(0, (_maxExplosionRadius - _minExplosionRadius) * chargeProcentAmount);
         spawnedBullet.Init(bulletData);
     }
 
