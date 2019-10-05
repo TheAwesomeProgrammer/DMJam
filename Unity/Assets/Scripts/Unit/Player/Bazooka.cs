@@ -3,8 +3,8 @@ using System.Collections;
 
 public class Bazooka : Weapon
 {
-    private const float MIN_EXPLOSION_FORCE = 30;
-    private const float MAX_EXPLOSION_FORCE = 50;
+    private const float MIN_EXPLOSION_FORCE = 40;
+    private const float MAX_EXPLOSION_FORCE = 70;
     private const float CHARGE_TIME = 2;
     private const float SLOW_MOTION_SCALE = 0.5f;
     private const string CHARGE_INPUT_NAME = "PlayerCharge";
