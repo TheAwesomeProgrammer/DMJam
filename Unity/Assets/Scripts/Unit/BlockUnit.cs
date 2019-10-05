@@ -9,6 +9,6 @@ public class BlockUnit : Unit
 
     private void Awake()
     {
-                        
+        TriggerNotifier triggerNotifier = _rootGo.AddComponent<TriggerNotifier>();
     }
 }
