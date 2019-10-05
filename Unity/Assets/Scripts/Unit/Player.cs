@@ -5,7 +5,7 @@ using System;
 public class Player : Unit
 {
     private const string FIRE_INPUT = "PlayerFire";
-    private const int BABY_KILL_QUOTA = 3;
+    public const int BABY_KILL_QUOTA = 3;
 
     private int _babiesKilled;
 
@@ -23,6 +23,7 @@ public class Player : Unit
 
     public event Action PlayerFlipped;
     public event Action MetKilledBabyQuota;
+    public event Action KilledABaby;
 
     protected override void Update()
     {
@@ -40,6 +41,7 @@ public class Player : Unit
         if(unit.UnitType == UnitType.Baby)
         {
             _babiesKilled++;
+            KilledABaby?.Invoke();
         }
         if(_babiesKilled >= BABY_KILL_QUOTA)
         {

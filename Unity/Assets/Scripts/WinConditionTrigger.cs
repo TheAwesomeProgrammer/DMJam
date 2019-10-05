@@ -5,10 +5,19 @@ using UnityEngine.SceneManagement;
 public class WinConditionTrigger : MonoBehaviour
 {
     [SerializeField]
+    private float _delayBeforeSwitchingToNextLevel;
+
+    [SerializeField]
     private Object _sceneToLoad;
 
     [SerializeField]
     private GameObject _triggerGo;
+
+    [SerializeField]
+    private SpriteRenderer _spriteRenderer;
+
+    [SerializeField]
+    private Sprite _deathSprite;
 
 
     private void Awake()
@@ -25,13 +34,18 @@ public class WinConditionTrigger : MonoBehaviour
     {
         if(_sceneToLoad != null)
         {
-            Game.Instance.CurrentLevelReached++;
-            SceneManager.LoadScene(_sceneToLoad.name);
+            _spriteRenderer.sprite = _deathSprite;
+            LeanTween.delayedCall(_delayBeforeSwitchingToNextLevel, MoveToNextLevel);
         }
         else
         {
             Debug.LogError("Please select correct scene object");
-        }
-        
+        }        
+    }
+
+    private void MoveToNextLevel()
+    {
+        Game.Instance.CurrentLevelReached++;
+        SceneManager.LoadScene(_sceneToLoad.name);
     }
 }

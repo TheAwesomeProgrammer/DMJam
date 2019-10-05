@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class LoseOnPlayerContact : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class LoseOnPlayerContact : MonoBehaviour
         Player player = unit as Player;
         if (player.PlayerMovement.HasMovedUp)
         {
-            Game.Instance.Lost();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }       
     }
 }

@@ -96,8 +96,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 968d12ff32d8796419be2fdc5ed5c923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _delayBeforeSwitchingToNextLevel: 0.5
   _sceneToLoad: {fileID: 102900000, guid: f98bda3d954d9284cb03d3cb58296f66, type: 3}
   _triggerGo: {fileID: 236155950930355338}
+  _spriteRenderer: {fileID: 236155950930355336}
+  _deathSprite: {fileID: -7188059855765184719, guid: 319f72d826302584e89532d152b0a3ed,
+    type: 3}
 --- !u!50 &1145648557
 Rigidbody2D:
   serializedVersion: 4
