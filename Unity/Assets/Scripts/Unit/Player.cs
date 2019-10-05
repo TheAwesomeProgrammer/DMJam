@@ -19,6 +19,7 @@ public class Player : Unit
 
     public override bool Damageable => false;
     public PlayerMovement PlayerMovement => _playerMovement;
+    public PlayerWeapons PlayerWeapons => _playerWeapons;
 
     public event Action PlayerFlipped;
     public event Action MetKilledBabyQuota;

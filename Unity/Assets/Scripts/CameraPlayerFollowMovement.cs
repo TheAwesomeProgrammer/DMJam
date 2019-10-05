@@ -22,7 +22,6 @@ public class CameraPlayerFollowMovement : MonoBehaviour
     {
         Vector2 normalizedDistanceToPlayer = NormalizedDirectionToPlayer();
         _bodyTransform.Translate(normalizedDistanceToPlayer * _smoothFollowSpeed * Time.deltaTime);
-
         
         _bodyTransform.position = GetNewCameraPositionWithinMaxDistance();
     }

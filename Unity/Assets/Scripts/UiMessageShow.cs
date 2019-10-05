@@ -16,7 +16,17 @@ public class UiMessageShow : MonoBehaviour
         _uiLabel.text = message;
         _uiLabel.gameObject.LeanMoveLocalX(0, MOVE_IN_TIME);
         LeanTween.delayedCall(MOVE_IN_TIME + SHOW_TIME,
-            () => _uiLabel.gameObject.LeanMoveLocalX(_uiLabel.rectTransform.rect.width, MOVE_IN_TIME));
-        LeanTween.delayedCall(MOVE_IN_TIME + SHOW_TIME + MOVE_IN_TIME, () => _uiLabel.gameObject.LeanMoveLocalX(-_uiLabel.rectTransform.rect.width, 0));
+            MoveOutToRight);
+        LeanTween.delayedCall(MOVE_IN_TIME + SHOW_TIME + MOVE_IN_TIME, MoveBackToLeft);
+    }
+
+    private void MoveOutToRight()
+    {
+        _uiLabel?.gameObject.LeanMoveLocalX(_uiLabel.rectTransform.rect.width, MOVE_IN_TIME);     
+    }
+
+    private void MoveBackToLeft()
+    {
+        _uiLabel?.gameObject.LeanMoveLocalX(-_uiLabel.rectTransform.rect.width, 0);
     }
 }

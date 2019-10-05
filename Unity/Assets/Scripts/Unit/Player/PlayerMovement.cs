@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private const string HORIZONTAL_AXIS_INPUT_NAME = "PlayerHorizontal";
+    private const string HORIZONTAL_AXIS_INPUT_NAME = "PlayerHorizontal";   
+
+    private Vector2 _currentMoveDirection;
+    private Vector3 _startPosition;
+
+    [SerializeField]
+    private float _distanceRequiredToMoveUp = 1;
 
     [SerializeField]
     private Player _player;
@@ -18,22 +24,36 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private Transform _graphicsTransform;
 
-    private Vector2 _currentMoveDirection;
+    public bool HasMovedUp { get; private set; }
 
     private void Awake()
     {
+        _startPosition = _graphicsTransform.position;
         _player.PlayerFlipped += Flip;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        CheckIfHasMovedUp();
         SetMoveDirection();
 
         if(Mathf.Abs(_currentMoveDirection.x) > 0)
         {
             _rigidbody2D.AddForce(_currentMoveDirection * _acceleration, ForceMode2D.Force);
         }
+    }
+
+    private void CheckIfHasMovedUp()
+    {
+        if (!HasMovedUp)
+        {
+            Vector2 distanceFromStartPosition = _graphicsTransform.position - _startPosition;
+            if (distanceFromStartPosition.y > _distanceRequiredToMoveUp)
+            {
+                HasMovedUp = true;
+            }
+        }       
     }
 
     private void SetMoveDirection()
