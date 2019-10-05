@@ -61,8 +61,16 @@ public class Explosion : MonoBehaviour
 
         triggerNotifier.UnitEntered += UnitEntered;
         LeanTween.alpha(_backgroundIndicatorGo, 0, _aliveTime);
-        LeanTween.delayedCall(_forceApplyTime, () => _circleCollider2D.enabled = false);
+        LeanTween.delayedCall(_forceApplyTime, StopApplyingExplosionForce);
         LeanTween.delayedCall(_aliveTime, () => Destroy(_rootGo));
+    }
+
+    private void StopApplyingExplosionForce()
+    {
+        if (_circleCollider2D)
+        {
+            _circleCollider2D.enabled = false;
+        }
     }
 
     private void UnitEntered(UnitType unitType, Unit unit)

@@ -13,6 +13,14 @@ public class Charger : MonoBehaviour
     private float _chargingTime;
     private float _fillAmount;
     private float _fillAmountPerSprite;
+    private float _startZoom;
+    private LTDescr _currentZoomOutTween;
+
+    [SerializeField]
+    private float _zoomOutTime;
+
+    [SerializeField]
+    private float _zoomedInSize;
 
     [SerializeField]
     private Player _player;
@@ -31,8 +39,14 @@ public class Charger : MonoBehaviour
 
     private event ChargeEnded _chargeEnded;
 
+    private void Awake()
+    {
+        _startZoom = _zoomCamera.orthographicSize;
+    }
+
     public void Charge(float chargeDuration, string chargeInputName, ChargeEnded chargeEnded)
     {
+        LeanTween.cancel(gameObject);
         ResetCharger();
         _chargeInputName = chargeInputName;
         _chargeEnded = chargeEnded;
@@ -45,6 +59,7 @@ public class Charger : MonoBehaviour
     {
         if (_isCharging)
         {
+            _zoomCamera.orthographicSize = Mathf.Lerp(_startZoom, _zoomedInSize, _chargingTime);
             _fillAmount = Mathf.Lerp(0, MAX_CHARGE_AMOUNT, _chargingTime);
             _chargingTime += Time.deltaTime;
             _chargeImage.sprite = GetSpriteBasedOnFillAmount(_fillAmount);
@@ -68,6 +83,9 @@ public class Charger : MonoBehaviour
 
     private void ResetCharger()
     {
+        _currentZoomOutTween = LeanTween.value(gameObject, _zoomCamera.orthographicSize , _startZoom, _zoomOutTime).setOnUpdate((float newZoomSize) => {
+            _zoomCamera.orthographicSize = newZoomSize;
+        });
         _fillAmountPerSprite = 0;
         _chargeImage.sprite = null;
         _chargingTime = 0;

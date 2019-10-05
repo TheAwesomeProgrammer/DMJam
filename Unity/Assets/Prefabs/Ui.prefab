@@ -165,6 +165,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efd279aada2d1e49a62b26852be6df3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _zoomOutTime: 0.25
+  _zoomedInSize: 5
   _player: {fileID: 0}
   _chargeImage: {fileID: 5185350025815950961}
   _bodyTransform: {fileID: 5185350025815950960}
@@ -175,6 +177,7 @@ MonoBehaviour:
   - {fileID: 9061270252615649396, guid: 319f72d826302584e89532d152b0a3ed, type: 3}
   - {fileID: -8412501384108537732, guid: 319f72d826302584e89532d152b0a3ed, type: 3}
   - {fileID: -3911067791324072773, guid: 319f72d826302584e89532d152b0a3ed, type: 3}
+  _zoomCamera: {fileID: 0}
 --- !u!1 &5185350026031545642
 GameObject:
   m_ObjectHideFlags: 0
