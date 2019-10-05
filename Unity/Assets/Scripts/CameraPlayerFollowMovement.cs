@@ -3,7 +3,8 @@ using System.Collections;
 
 public class CameraPlayerFollowMovement : MonoBehaviour
 {
-    private float DAMP_TIME = 1f;
+    [SerializeField]
+    private float _outOfBoxCatchUpTime = 1f;
 
     [SerializeField]
     private Vector2 _maxDistance;
@@ -33,11 +34,11 @@ public class CameraPlayerFollowMovement : MonoBehaviour
 
         if (Mathf.Abs(distanceBetweenPlayerAndCamera.x) > _maxDistance.x)
         {            
-            newCameraPositionWithinMaxDistance.x = Mathf.Lerp(_bodyTransform.position.x, _playerBodyTransform.position.x, 1 / DAMP_TIME * Time.deltaTime);
+            newCameraPositionWithinMaxDistance.x = Mathf.Lerp(_bodyTransform.position.x, _playerBodyTransform.position.x, 1 / _outOfBoxCatchUpTime * Time.deltaTime);
         }
         if (Mathf.Abs(distanceBetweenPlayerAndCamera.y) > _maxDistance.y)
         {
-            newCameraPositionWithinMaxDistance.y = Mathf.Lerp(_bodyTransform.position.y, _playerBodyTransform.position.y, 1 / DAMP_TIME * Time.deltaTime);
+            newCameraPositionWithinMaxDistance.y = Mathf.Lerp(_bodyTransform.position.y, _playerBodyTransform.position.y, 1 / _outOfBoxCatchUpTime * Time.deltaTime);
         }
 
         return newCameraPositionWithinMaxDistance;
