@@ -244,7 +244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78fdb2b7587bdc74390efbfca4e5ddf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _growTime: 0.1
+  _growTime: 1.5
   _grownRadius: 3
   _circleCollider2D: {fileID: 5644824799205312367}
   _rootGo: {fileID: 5644824799205312354}
