@@ -11,6 +11,8 @@ public class Charger : MonoBehaviour
     private string _chargeInputName;
     private bool _isCharging;
     private float _chargingTime;
+    private float _fillAmount;
+    private float _fillAmountPerSprite;
 
     [SerializeField]
     private Player _player;
@@ -18,28 +20,13 @@ public class Charger : MonoBehaviour
     [SerializeField]
     private Image _chargeImage;
 
+    [SerializeField]
+    private Transform _bodyTransform;
+
+    [SerializeField]
+    private Sprite[] _chargeSprites;
+
     private event ChargeEnded _chargeEnded;
-
-    private void Awake()
-    {
-        _player.PlayerFlipped += OnPlayerFlipped;
-    }
-
-    private void OnPlayerFlipped()
-    {
-        Image.OriginHorizontal originHorizontal = (Image.OriginHorizontal)_chargeImage.fillOrigin;
-
-        switch (originHorizontal)
-        {
-            case Image.OriginHorizontal.Left:
-                _chargeImage.fillOrigin = (int)Image.OriginHorizontal.Right;
-                break;
-
-            case Image.OriginHorizontal.Right:
-                _chargeImage.fillOrigin = (int)Image.OriginHorizontal.Left;
-                break;
-        }
-    }
 
     public void Charge(float chargeDuration, string chargeInputName, ChargeEnded chargeEnded)
     {
@@ -48,15 +35,17 @@ public class Charger : MonoBehaviour
         _chargeEnded = chargeEnded;
         _isCharging = true;
         _chargeImage.enabled = true;
+        _fillAmountPerSprite = MAX_CHARGE_AMOUNT / _chargeSprites.Length;
     }
 
     private void Update()
     {
         if (_isCharging)
         {
-            _chargeImage.fillAmount = Mathf.Lerp(0, MAX_CHARGE_AMOUNT, _chargingTime);
+            _fillAmount = Mathf.Lerp(0, MAX_CHARGE_AMOUNT, _chargingTime);
             _chargingTime += Time.deltaTime;
-            if (Input.GetButtonUp(_chargeInputName) || _chargeImage.fillAmount >= MAX_CHARGE_AMOUNT)
+            _chargeImage.sprite = GetSpriteBasedOnFillAmount(_fillAmount);
+            if (Input.GetButtonUp(_chargeInputName) || _fillAmount >= MAX_CHARGE_AMOUNT)
             {
                 _chargeEnded?.Invoke(_chargeImage.fillAmount);
                 ResetCharger();               
@@ -64,8 +53,20 @@ public class Charger : MonoBehaviour
         }
     }
 
+    private Sprite GetSpriteBasedOnFillAmount(float fillAmount)
+    {
+        int spriteIndex = Mathf.FloorToInt(fillAmount / _fillAmountPerSprite);
+        if(spriteIndex >= _chargeSprites.Length)
+        {
+            spriteIndex = _chargeSprites.Length - 1;
+        }
+        return _chargeSprites[spriteIndex];
+    }
+
     private void ResetCharger()
     {
+        _fillAmountPerSprite = 0;
+        _chargeImage.sprite = null;
         _chargingTime = 0;
         _chargeImage.enabled = false;
         _chargeImage.fillAmount = 0;
