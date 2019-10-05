@@ -6,10 +6,4 @@ public class BlockUnit : Unit
     public override UnitType UnitType => UnitType.Block;
 
     public override bool Damageable => true;
-
-    private void Awake()
-    {
-        TriggerNotifier triggerNotifier = _rootGo.AddComponent<TriggerNotifier>();
-        triggerNotifier.Init(new System.Collections.Generic.List<UnitType>() { UnitType.Player });
-    }
 }
