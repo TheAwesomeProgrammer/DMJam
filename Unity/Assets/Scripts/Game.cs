@@ -53,6 +53,11 @@ public class Game : MonoBehaviour
 
     private void OnMetKilledBabyQuota()
     {
+        Lost();
+    }
+
+    public void Lost()
+    {
         SceneManager.LoadScene(_sceneToLoadOnLose.name);
     }
 }

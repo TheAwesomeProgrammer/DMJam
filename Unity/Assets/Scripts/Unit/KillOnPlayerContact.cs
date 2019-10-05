@@ -15,6 +15,6 @@ public class LoseOnPlayerContact : MonoBehaviour
 
     private void UnitEntered(UnitType unitType, Unit unit)
     {
-        Game.Instance.
+        Game.Instance.Lost();
     }
 }
