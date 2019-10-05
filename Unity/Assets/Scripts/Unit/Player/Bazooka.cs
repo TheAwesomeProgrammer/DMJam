@@ -5,6 +5,11 @@ public class Bazooka : Weapon
 {
     private const string CHARGE_INPUT_NAME = "PlayerCharge";
 
+    private PlayerMovement _playerMovement;
+
+    [SerializeField]
+    private float _recoilForce;
+
     [SerializeField]
     private float _minExplosionForce = 40;
 
@@ -34,6 +39,11 @@ public class Bazooka : Weapon
 
     public override WeaponType WeaponType => WeaponType.Bazooka;
 
+    private void Awake()
+    {
+        _playerMovement = _player.PlayerMovement;
+    }
+
     protected override void FireWeapon()
     {
         Time.timeScale = _slowMotionScale;
@@ -42,6 +52,7 @@ public class Bazooka : Weapon
 
     private void FireBazookaShot(float chargeProcentAmount)
     {
+        _playerMovement.AddRecoil(_recoilForce, GetMouseDirection());
         Time.timeScale = 1;
         BulletData bulletData = (BulletData)_bulletDataTemplate.Clone();
         Bullet spawnedBullet = Instantiate(_bulletPrefab, _spawnTransform.position, Quaternion.identity);
