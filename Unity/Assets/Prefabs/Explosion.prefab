@@ -158,7 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01b5ce58ee49f614fabe0572898b71b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _explosionForce: 30
+  _explosionForce: 40
   _bodyTransform: {fileID: 5644824799205312361}
   _bodyGo: {fileID: 5644824799205312354}
   _growCircleCollider: {fileID: 5644824799205312364}

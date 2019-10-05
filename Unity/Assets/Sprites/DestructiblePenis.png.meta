@@ -1,0 +1,871 @@
+fileFormatVersion: 2
+guid: 0fc889c73e56bdb4b8bcaece958f8cac
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3061546050137711225
+    second: DestructiblePenis_0
+  - first:
+      213: -1789423477834293279
+    second: DestructiblePenis_1
+  - first:
+      213: 8638352247298674786
+    second: DestructiblePenis_2
+  - first:
+      213: -1648547245350877264
+    second: DestructiblePenis_3
+  - first:
+      213: -2251869558288337360
+    second: DestructiblePenis_4
+  - first:
+      213: 6890811761143131286
+    second: DestructiblePenis_5
+  - first:
+      213: -7537174891302682923
+    second: DestructiblePenis_6
+  - first:
+      213: -6509276445093466441
+    second: DestructiblePenis_7
+  - first:
+      213: 6627240398523944497
+    second: DestructiblePenis_8
+  - first:
+      213: 3882017429062134995
+    second: DestructiblePenis_9
+  - first:
+      213: -4123193577446095855
+    second: DestructiblePenis_10
+  - first:
+      213: 8134746767160299717
+    second: DestructiblePenis_11
+  - first:
+      213: 949413928267839778
+    second: DestructiblePenis_12
+  - first:
+      213: 3689014445078324080
+    second: DestructiblePenis_13
+  - first:
+      213: 5080350140619414419
+    second: DestructiblePenis_14
+  - first:
+      213: 4551159744082179884
+    second: DestructiblePenis_15
+  - first:
+      213: 3857503562649426297
+    second: DestructiblePenis_16
+  - first:
+      213: 2295071353030519574
+    second: DestructiblePenis_17
+  - first:
+      213: 4395854119677044540
+    second: DestructiblePenis_18
+  - first:
+      213: -3487077830215794020
+    second: DestructiblePenis_19
+  - first:
+      213: -3109193546348593425
+    second: DestructiblePenis_20
+  - first:
+      213: 2330246351913754343
+    second: DestructiblePenis_21
+  - first:
+      213: -8571644937489184824
+    second: DestructiblePenis_22
+  - first:
+      213: 4887596380039407719
+    second: DestructiblePenis_23
+  - first:
+      213: 2783726610281030820
+    second: DestructiblePenis_24
+  - first:
+      213: -4836235952896247802
+    second: DestructiblePenis_25
+  - first:
+      213: -8822212285991270268
+    second: DestructiblePenis_26
+  - first:
+      213: 4501626097365455218
+    second: DestructiblePenis_27
+  - first:
+      213: 6910969197924302918
+    second: DestructiblePenis_28
+  - first:
+      213: 6726647723744171990
+    second: DestructiblePenis_29
+  - first:
+      213: -8658282908263781242
+    second: DestructiblePenis_30
+  - first:
+      213: -4001830842510258296
+    second: DestructiblePenis_31
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DestructiblePenis_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 422
+        width: 71
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdb5b208d66c5e044b789919dc134d16
+      internalID: 3061546050137711225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DestructiblePenis_1
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 477
+        width: 49
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a90d1ad19942da643a92b7a7ae980972
+      internalID: -1789423477834293279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DestructiblePenis_2
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 409
+        width: 93
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cf9726dadee07444b1fc43799099581
+      internalID: 8638352247298674786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DestructiblePenis_3
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 477
+        width: 112
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50321901dfdef1e4d94cbe9014b71e1d
+      internalID: -1648547245350877264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DestructiblePenis_4
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 418
+        width: 66
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a79abc777946c374a8efc6fc8b48730e
+      internalID: -2251869558288337360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DestructiblePenis_5
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 461
+        width: 103
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 581f962e12349364193ca7606f3b1a65
+      internalID: 6890811761143131286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DestructiblePenis_6
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 381
+        width: 74
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eec805d6f1428a4594c69ef3545acba
+      internalID: -7537174891302682923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DestructiblePenis_7
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 422
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fc246fee704f21418c2fdc12930b627
+      internalID: -6509276445093466441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DestructiblePenis_8
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 435
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0e61ab25fa7d164c89197732a29a709
+      internalID: 6627240398523944497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DestructiblePenis_9
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 323
+        width: 146
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14edca557b9eb0d4ebce593c9b6e7a50
+      internalID: 3882017429062134995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DestructiblePenis_10
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 331
+        width: 92
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c51ef8f003b88149b60402fb690274f
+      internalID: -4123193577446095855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DestructiblePenis_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 264
+        width: 136
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8be076437436ef45aae4c15e292485d
+      internalID: 8134746767160299717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DestructiblePenis_12
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 327
+        width: 82
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d044763a56200b84389fedae0bf0d24c
+      internalID: 949413928267839778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DestructiblePenis_13
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 368
+        width: 70
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef0c8f84ae5357c449f0f2a4bdb365b0
+      internalID: 3689014445078324080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DestructiblePenis_14
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 319
+        width: 60
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9892d61fca8282a4eaed98a799de917f
+      internalID: 5080350140619414419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DestructiblePenis_15
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 165
+        width: 112
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2317eb8520c05a4eb522e15fb2e762a
+      internalID: 4551159744082179884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DestructiblePenis_16
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 248
+        width: 75
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dde3c963e062254588b575bac239e33
+      internalID: 3857503562649426297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DestructiblePenis_17
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 263
+        width: 55
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2c42cb1ba4005b4785ff24e83825873
+      internalID: 2295071353030519574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DestructiblePenis_18
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 213
+        width: 98
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a40ec8e70528d741ac87f6be41b23b4
+      internalID: 4395854119677044540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DestructiblePenis_19
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 233
+        width: 124
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1137a6aa9f29c7c49a89130ba732b60f
+      internalID: -3487077830215794020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DestructiblePenis_20
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 109
+        width: 97
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1245fc1fa81554d428a41364747baee5
+      internalID: -3109193546348593425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DestructiblePenis_21
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 157
+        width: 32
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e8759c6d62f85f4295e59255521ee7e
+      internalID: 2330246351913754343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DestructiblePenis_22
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 95
+        width: 143
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3a4fbd35eeaf584ba42e95df0fe4401
+      internalID: -8571644937489184824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DestructiblePenis_23
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 150
+        width: 43
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e95d678dfb5c87245b97d00383ff819a
+      internalID: 4887596380039407719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DestructiblePenis_24
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 92
+        width: 156
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0257c36511d56f84caa2517cb8dbd7ae
+      internalID: 2783726610281030820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DestructiblePenis_25
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 16
+        width: 124
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae5ee7e785fc7194e97c0186f01ea039
+      internalID: -4836235952896247802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DestructiblePenis_26
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 86
+        width: 32
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dad72b2a24047b543ba3c87d44604ace
+      internalID: -8822212285991270268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DestructiblePenis_27
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 114
+        width: 29
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 921651442052f954da1fb10d0f2bebeb
+      internalID: 4501626097365455218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DestructiblePenis_28
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 2
+        width: 131
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 219ce3c9c11d7344fa0b233f19821112
+      internalID: 6910969197924302918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DestructiblePenis_29
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 2
+        width: 100
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8636222128a618b4aad8c9a025257264
+      internalID: 6726647723744171990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DestructiblePenis_30
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 2
+        width: 99
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9eeecac2abae4e4daa8de9ffae6fd74
+      internalID: -8658282908263781242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DestructiblePenis_31
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10
+        width: 616
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d297364d9e912584a997c814f4df9b59
+      internalID: -4001830842510258296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

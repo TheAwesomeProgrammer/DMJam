@@ -5,7 +5,7 @@ public enum UnitType
 {
     Player,
     Block,
-    FriendlyEnemy,
+    Baby,
     Bullet,
     Ground
 }

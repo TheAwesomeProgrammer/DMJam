@@ -12,6 +12,7 @@ public class BulletData : ICloneable
 
     public Unit UnitDealingDamage { get; set; }
     public Vector2 Direction { get; set; }
+    public float ExplosionForce { get; set; }
 
     public object Clone()
     {

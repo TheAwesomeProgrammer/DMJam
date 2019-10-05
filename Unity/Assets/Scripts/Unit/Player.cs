@@ -1,9 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class Player : Unit
 {
     private const string FIRE_INPUT = "PlayerFire";
+    private const int BABY_KILL_QUOTA = 3;
+
+    private int _babiesKilled;
 
     [SerializeField]
     private PlayerWeapons _playerWeapons;
@@ -16,6 +20,9 @@ public class Player : Unit
     public override bool Damageable => false;
     public PlayerMovement PlayerMovement => _playerMovement;
 
+    public event Action PlayerFlipped;
+    public event Action MetKilledBabyQuota;
+
     protected override void Update()
     {
         base.Update();
@@ -24,5 +31,23 @@ public class Player : Unit
             Weapon currentWeapon = _playerWeapons.CurrentWeapon;
             currentWeapon.Fire();
         }
+    }
+
+    public override void OnKilledUnit(Unit unit)
+    {
+        base.OnKilledUnit(unit);
+        if(unit.UnitType == UnitType.Baby)
+        {
+            _babiesKilled++;
+        }
+        if(_babiesKilled >= BABY_KILL_QUOTA)
+        {
+            MetKilledBabyQuota?.Invoke();
+        }
+    }
+
+    public void Flip()
+    {
+        PlayerFlipped?.Invoke();
     }
 }

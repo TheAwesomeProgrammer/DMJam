@@ -7,8 +7,6 @@ public class Explosion : MonoBehaviour
     private const int GARANTEED_DAMAGE_AMOUNT = int.MaxValue;
 
     private Unit _unitDealingDamage;
-
-    [SerializeField]
     private float _explosionForce;
 
     [SerializeField]
@@ -27,11 +25,13 @@ public class Explosion : MonoBehaviour
 
     private List<UnitType> _typesExplosionCanDamage = new List<UnitType>()
     {
-        UnitType.Block
+        UnitType.Block,
+        UnitType.Baby
     };
 
-    public void Init(Unit unitDealingDamage)
+    public void Init(float explosionForce, Unit unitDealingDamage)
     {
+        _explosionForce = explosionForce;
         _unitDealingDamage = unitDealingDamage;
         TriggerNotifier triggerNotifier = _bodyGo.AddComponent<TriggerNotifier>();
 

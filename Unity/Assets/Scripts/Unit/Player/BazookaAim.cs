@@ -18,27 +18,25 @@ public class BazookaAim : MonoBehaviour
     [SerializeField]
     private int _lookingDirectionMinAimAngle;
 
-    private PlayerMovement _playerMovement;
     private float _lastAngle;
     private Direction _currentLookingDirection;
 
     private void Start()
     {
         _currentLookingDirection = _startLookingDirection;
-        _playerMovement = _player.PlayerMovement;
     }
 
     private void Update()
     {          
         if (Vector2.Angle(GetStartLookDirection(), GetMouseDirectionRelativeToLookingDirection()) > _lookingDirectionMaxAimAngle)
         {
-            _playerMovement.Flip();
+            _player.Flip();
             _currentLookingDirection = (Direction)((int)_currentLookingDirection * -1);
             _bazookaBodyTransform.rotation = Quaternion.Euler(0, 0, _lookingDirectionMaxAimAngle - 1);           
         }
         else if(Vector2.Angle(GetStartLookDirection(), GetMouseDirectionRelativeToLookingDirection()) > _lookingDirectionMinAimAngle)
         {
-            _playerMovement.Flip();
+            _player.Flip();
             _currentLookingDirection = (Direction)((int)_currentLookingDirection * -1);
             _bazookaBodyTransform.rotation = Quaternion.Euler(0, 0, _lookingDirectionMinAimAngle - 1);
         }

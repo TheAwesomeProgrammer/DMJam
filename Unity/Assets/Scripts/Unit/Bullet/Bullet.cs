@@ -32,7 +32,7 @@ public class Bullet : Unit
     private void OnUnitEntered(UnitType unitType, Unit unit)
     {
         Explosion explosion = Instantiate(_explosionPrefab, _bodyTransform.position, Quaternion.identity);
-        explosion.Init(_bulletData.UnitDealingDamage);
+        explosion.Init(_bulletData.ExplosionForce, _bulletData.UnitDealingDamage);
         Destroy(_rootGo);
     }
 

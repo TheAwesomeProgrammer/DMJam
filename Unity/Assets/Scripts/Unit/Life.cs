@@ -27,6 +27,7 @@ public class Life
 
     public void Init(bool isDamageable, Unit ownerUnit)
     {
+        _ownerUnit = ownerUnit;
         _isDamageable = isDamageable;
     }
 

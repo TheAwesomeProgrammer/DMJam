@@ -7,15 +7,23 @@ public class PlayerMovement : MonoBehaviour
     private const string HORIZONTAL_AXIS_INPUT_NAME = "PlayerHorizontal";
 
     [SerializeField]
+    private Player _player;
+
+    [SerializeField]
     private float _acceleration;
 
     [SerializeField]
     private Rigidbody2D _rigidbody2D;
 
     [SerializeField]
-    private Transform _bodyTransform;
+    private Transform _graphicsTransform;
 
     private Vector2 _currentMoveDirection;
+
+    private void Awake()
+    {
+        _player.PlayerFlipped += Flip;
+    }
 
     // Update is called once per frame
     void FixedUpdate()
@@ -37,11 +45,11 @@ public class PlayerMovement : MonoBehaviour
     public void AddExplosionForce(float explosionForce, Vector2 explosionPositon, float explosionRadius)
     {
         _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, 0);
-        _rigidbody2D.AddExplosionForce(explosionForce, explosionPositon, explosionRadius, 2, ForceMode2D.Impulse);
+        _rigidbody2D.AddExplosionForce(explosionForce, explosionPositon, explosionRadius, 0, ForceMode2D.Impulse);
     }
 
-    public void Flip()
+    private void Flip()
     {        
-        _bodyTransform.localScale = new Vector3(_bodyTransform.lossyScale.x * -1, _bodyTransform.lossyScale.y * -1);
+        _graphicsTransform.localScale = new Vector3(_graphicsTransform.lossyScale.x * -1, _graphicsTransform.lossyScale.y);
     }
 }

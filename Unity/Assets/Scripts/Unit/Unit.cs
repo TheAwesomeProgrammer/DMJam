@@ -39,7 +39,6 @@ public abstract class Unit : MonoBehaviour
     {
         _life.Init(Damageable, this);
         _life.Died += Die;
-
     }
 
     protected virtual void Update()
