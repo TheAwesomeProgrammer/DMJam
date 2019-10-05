@@ -10112,7 +10112,7 @@ PrefabInstance:
     - target: {fileID: 236155950930355337, guid: 9b1f2f2297ef43140a7913475955ebd3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.89
+      value: 23.93
       objectReference: {fileID: 0}
     - target: {fileID: 236155950930355337, guid: 9b1f2f2297ef43140a7913475955ebd3,
         type: 3}
@@ -10612,6 +10612,10 @@ PrefabInstance:
       propertyPath: _charger
       value: 
       objectReference: {fileID: 375233401}
+    - target: {fileID: 1614947681, guid: 76fcdb104c71a4e44a7a3b1abd62a65c, type: 3}
+      propertyPath: _recoilForce
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76fcdb104c71a4e44a7a3b1abd62a65c, type: 3}
 --- !u!1001 &6733399646943223148

@@ -26,6 +26,9 @@ public class Charger : MonoBehaviour
     [SerializeField]
     private Sprite[] _chargeSprites;
 
+    [SerializeField]
+    private Camera _zoomCamera;
+
     private event ChargeEnded _chargeEnded;
 
     public void Charge(float chargeDuration, string chargeInputName, ChargeEnded chargeEnded)

@@ -62,6 +62,11 @@ public class PlayerMovement : MonoBehaviour
         _currentMoveDirection.Normalize();
     }
 
+    public void AddRecoil(float recoilForce, Vector2 shootDirection)
+    {
+        _rigidbody2D.AddForce(-shootDirection * recoilForce, ForceMode2D.Impulse);
+    }
+
     public void AddExplosionForce(float explosionForce, Vector2 explosionPositon, float explosionRadius)
     {
         _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, 0);
