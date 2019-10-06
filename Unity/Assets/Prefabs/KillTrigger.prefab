@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4211736823640980765}
   - component: {fileID: 8418056403803945392}
-  - component: {fileID: 2671538243418120895}
   m_Layer: 0
   m_Name: KillTrigger
   m_TagString: Untagged
@@ -44,30 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdb8c4108415bf541a1d3e588b772885, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _triggerGo: {fileID: 7772373268523618584}
---- !u!61 &2671538243418120895
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7772373268523618584}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.0011906326, y: 0.32579735}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.54037935, y: 0.17203385}
-  m_EdgeRadius: 0
+  _raycastDistance: 1
+  _raycastMask:
+    serializedVersion: 2
+    m_Bits: 256
+  _bodyTransform: {fileID: 0}
