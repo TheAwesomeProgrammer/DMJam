@@ -18,6 +18,6 @@ public class GameOverManager : MonoBehaviour
 
     private void LoadSceneAfterTime()
     {
-        Game.Instance.LoadLevel(Game.Instance.CurrentLevelReached);
+        LevelManager.Instance.LoadHighestUnlockedLevel();
     }
 }

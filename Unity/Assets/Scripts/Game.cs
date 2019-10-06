@@ -4,16 +4,18 @@ using UnityEngine.SceneManagement;
 
 public class Game : MonoBehaviour
 {
+    private const string MINI_MAP_INPUT = "MiniMap";
+
     private static Game _instance;
+
+    [SerializeField]
+    private GameObject _miniMapGo;
 
     [SerializeField]
     private Player _player;
 
     [SerializeField]
     private Object _sceneToLoadOnLose;
-
-    [SerializeField]
-    private Object[] _levels;
 
     public static Game Instance
     {
@@ -40,11 +42,6 @@ public class Game : MonoBehaviour
         }
     }
 
-    public void LoadLevel(int level)
-    {
-        SceneManager.LoadScene(_levels[level].name);
-    }
-
     private void Awake()
     {
         _player.MetKilledBabyQuota += OnMetKilledBabyQuota;
@@ -54,6 +51,14 @@ public class Game : MonoBehaviour
     private void OnMetKilledBabyQuota()
     {
         Lost();
+    }
+
+    private void Update()
+    {
+        if (Input.GetButtonDown(MINI_MAP_INPUT))
+        {
+            _miniMapGo.SetActive(!_miniMapGo.activeSelf);
+        }
     }
 
     public void Lost()

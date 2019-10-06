@@ -5446,7 +5446,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!20 &906370984
 Camera:
   m_ObjectHideFlags: 0
@@ -5456,8 +5456,8 @@ Camera:
   m_GameObject: {fileID: 906370983}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 1, g: 0.96495914, b: 0, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.16981131, g: 0.16981131, b: 0.16981131, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -5466,10 +5466,10 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.88
-    y: 0
-    width: 0.12
-    height: 0.2
+    x: 0.1
+    y: 0.05
+    width: 0.8
+    height: 0.9
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -6501,6 +6501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 750be41031bcfd647bd4455a6bde1334, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _miniMapGo: {fileID: 906370983}
   _player: {fileID: 250140048}
   _sceneToLoadOnLose: {fileID: 102900000, guid: 3c9575f0ad32aba41b6105f61f04abee,
     type: 3}

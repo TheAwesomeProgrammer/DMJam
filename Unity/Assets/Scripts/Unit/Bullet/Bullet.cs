@@ -36,8 +36,9 @@ public class Bullet : Unit
         Destroy(_rootGo);
     }
 
-    private void Update()
+    protected override void Update()
     {
+        base.Update();
         _bodyTransform.Translate(_defaultLookDirection * _bulletData.Speed * Time.deltaTime);
     }
 }
