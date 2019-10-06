@@ -5,21 +5,24 @@ using UnityEngine.SceneManagement;
 public class LoseOnPlayerContact : MonoBehaviour
 {
     [SerializeField]
-    private GameObject _triggerGo;
+    private float _extraRaycastDistance = 0.1f;
 
-    private void Awake()
-    {
-        TriggerNotifier triggerNotifier = _triggerGo.AddComponent<TriggerNotifier>();
-        triggerNotifier.Init(new System.Collections.Generic.List<UnitType>() { UnitType.Player });
-        triggerNotifier.UnitEntered += UnitEntered;
-    }
+    [SerializeField]
+    private LayerMask _raycastMask;
 
-    private void UnitEntered(UnitType unitType, Unit unit)
+    [SerializeField]
+    private Transform _bodyTransform;
+
+    private void Update()
     {
-        Player player = unit as Player;
-        if (player.PlayerMovement.HasMovedUp)
+        RaycastHit2D hit = Physics2D.Raycast(_bodyTransform.position, Vector2.up, _bodyTransform.lossyScale.y /2 + _extraRaycastDistance, _raycastMask);
+        if(hit.collider)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }       
+            Player player = hit.collider.GetComponentInParent<Player>();
+            if (player.PlayerMovement.HasMovedUp)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
+        }
     }
 }
