@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 5049610706204411717}
   - component: {fileID: 5049610706204411834}
   - component: {fileID: 5049610706204411832}
+  - component: {fileID: 923601233}
+  - component: {fileID: -3531598888066728563}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -42,7 +44,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.2784314, g: 0.2784314, b: 0.28235295, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -83,3 +85,33 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5049610706204411833}
   m_Enabled: 1
+--- !u!114 &923601233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5049610706204411833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89ca0a90ef33cb348b5909e78494f885, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _distanceToPlayerToReach: 0.5
+  _speed: 15
+  _player: {fileID: 0}
+  _cameraRootTransform: {fileID: 5049610706204411717}
+  _playerBodyTransform: {fileID: 0}
+--- !u!114 &-3531598888066728563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5049610706204411833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5f980425d6ff134ca27fd5e1fffd3ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _levelSelectMenu: {fileID: 102900000, guid: d783f125466758a4fa458ca867ecd941, type: 3}

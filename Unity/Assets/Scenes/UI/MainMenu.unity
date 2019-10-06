@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 1019290236}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &134574720
@@ -197,8 +197,8 @@ GameObject:
   - component: {fileID: 1019290237}
   - component: {fileID: 1019290239}
   - component: {fileID: 1019290238}
-  - component: {fileID: 1019290241}
   - component: {fileID: 1019290240}
+  - component: {fileID: 1019290241}
   m_Layer: 5
   m_Name: Play
   m_TagString: Untagged
@@ -248,7 +248,7 @@ MonoBehaviour:
 '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -357,21 +357,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 538d26234dfecf34fbbc8815a35a88f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _scaleSizeIncrease: 0.5
+  _scaleTime: 0.25
   _mainMenuUi: {fileID: 1465838768}
   _type: 0
---- !u!114 &1019290241
-MonoBehaviour:
+--- !u!61 &1019290241
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1019290236}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates: []
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 200, y: 132}
+  m_EdgeRadius: 0
 --- !u!1 &1102985393
 GameObject:
   m_ObjectHideFlags: 0
@@ -384,6 +399,7 @@ GameObject:
   - component: {fileID: 1102985396}
   - component: {fileID: 1102985395}
   - component: {fileID: 1102985397}
+  - component: {fileID: 1102985398}
   m_Layer: 5
   m_Name: Credits
   m_TagString: Untagged
@@ -431,7 +447,7 @@ MonoBehaviour:
   m_text: Credits
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -540,8 +556,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 538d26234dfecf34fbbc8815a35a88f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _scaleSizeIncrease: 0.5
+  _scaleTime: 0.25
   _mainMenuUi: {fileID: 1465838768}
   _type: 2
+--- !u!61 &1102985398
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102985393}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 200, y: 122}
+  m_EdgeRadius: 0
 --- !u!1 &1465838765
 GameObject:
   m_ObjectHideFlags: 0
@@ -620,6 +664,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f70fc93eb9a8504789e21764d1ad906, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _sceneToLoadOnPlay: {fileID: 102900000, guid: d783f125466758a4fa458ca867ecd941,
+    type: 3}
+  _sceneToLoadOnTutorial: {fileID: 102900000, guid: 01c3325201094af4abe19445f316a036,
+    type: 3}
+  _sceneToLoadOnCredits: {fileID: 102900000, guid: 9610476035703c745a976c23f3708f37,
+    type: 3}
 --- !u!1 &1760163953
 GameObject:
   m_ObjectHideFlags: 0
@@ -632,6 +682,7 @@ GameObject:
   - component: {fileID: 1760163956}
   - component: {fileID: 1760163955}
   - component: {fileID: 1760163957}
+  - component: {fileID: 1760163958}
   m_Layer: 5
   m_Name: Quit
   m_TagString: Untagged
@@ -679,7 +730,7 @@ MonoBehaviour:
   m_text: Quit
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -788,8 +839,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 538d26234dfecf34fbbc8815a35a88f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _scaleSizeIncrease: 0.5
+  _scaleTime: 0.25
   _mainMenuUi: {fileID: 1465838768}
   _type: 3
+--- !u!61 &1760163958
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760163953}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 200, y: 132}
+  m_EdgeRadius: 0
 --- !u!1 &1787208842
 GameObject:
   m_ObjectHideFlags: 0
@@ -802,6 +881,7 @@ GameObject:
   - component: {fileID: 1787208845}
   - component: {fileID: 1787208844}
   - component: {fileID: 1787208846}
+  - component: {fileID: 1787208847}
   m_Layer: 5
   m_Name: Tutorial
   m_TagString: Untagged
@@ -849,7 +929,7 @@ MonoBehaviour:
   m_text: Tutorial
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -958,8 +1038,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 538d26234dfecf34fbbc8815a35a88f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _scaleSizeIncrease: 0.5
+  _scaleTime: 0.25
   _mainMenuUi: {fileID: 1465838768}
   _type: 1
+--- !u!61 &1787208847
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787208842}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 200, y: 120}
+  m_EdgeRadius: 0
 --- !u!1 &1818404046
 GameObject:
   m_ObjectHideFlags: 0
@@ -1008,12 +1116,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1600, y: 900}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -1027,8 +1135,8 @@ Canvas:
   m_GameObject: {fileID: 1818404046}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 1972985946}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -1095,7 +1203,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.2790139, g: 0.2794806, b: 0.2830189, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

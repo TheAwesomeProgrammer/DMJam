@@ -50,15 +50,11 @@ MonoBehaviour:
     _hardModeLevel: {fileID: 102900000, guid: 865c306e2efc11a418d73ccb3f76b9e6, type: 3}
   - _level: {fileID: 102900000, guid: 59cc210d76d9ecd4b9837b9fd6419a32, type: 3}
     _hardModeLevel: {fileID: 102900000, guid: b9e0af6b2424cc24eab2806452407ea2, type: 3}
-  - _level: {fileID: 102900000, guid: 9e01323ccc19bbc469bb48618d42ae3c, type: 3}
-    _hardModeLevel: {fileID: 102900000, guid: 9e01323ccc19bbc469bb48618d42ae3c, type: 3}
-  - _level: {fileID: 102900000, guid: 9e01323ccc19bbc469bb48618d42ae3c, type: 3}
-    _hardModeLevel: {fileID: 102900000, guid: 9e01323ccc19bbc469bb48618d42ae3c, type: 3}
-  - _level: {fileID: 102900000, guid: 9e01323ccc19bbc469bb48618d42ae3c, type: 3}
-    _hardModeLevel: {fileID: 102900000, guid: 9e01323ccc19bbc469bb48618d42ae3c, type: 3}
-  - _level: {fileID: 102900000, guid: 9e01323ccc19bbc469bb48618d42ae3c, type: 3}
-    _hardModeLevel: {fileID: 102900000, guid: 9e01323ccc19bbc469bb48618d42ae3c, type: 3}
-  - _level: {fileID: 102900000, guid: 9e01323ccc19bbc469bb48618d42ae3c, type: 3}
-    _hardModeLevel: {fileID: 102900000, guid: 9e01323ccc19bbc469bb48618d42ae3c, type: 3}
-  - _level: {fileID: 102900000, guid: 9e01323ccc19bbc469bb48618d42ae3c, type: 3}
-    _hardModeLevel: {fileID: 102900000, guid: 9e01323ccc19bbc469bb48618d42ae3c, type: 3}
+  - _level: {fileID: 102900000, guid: 5f05f1433e9369b4892ad2772d57593a, type: 3}
+    _hardModeLevel: {fileID: 102900000, guid: e9699db989b45b947a9c76de4206a3b5, type: 3}
+  - _level: {fileID: 102900000, guid: 4c9394158fde3834386fcde75616a136, type: 3}
+    _hardModeLevel: {fileID: 102900000, guid: 32423f9cd13091f40a46add9c3f0047e, type: 3}
+  - _level: {fileID: 102900000, guid: 9bb03f719c88967439919ee859b64b71, type: 3}
+    _hardModeLevel: {fileID: 102900000, guid: 49d2195db653aea498a6d48cbfae7b3e, type: 3}
+  - _level: {fileID: 102900000, guid: 95dc5fb4e9070e94d976a9bcbacd8fe9, type: 3}
+    _hardModeLevel: {fileID: 102900000, guid: 15692bcdc7664924284ef22c4e2c42c5, type: 3}

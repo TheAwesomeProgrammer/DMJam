@@ -35,7 +35,7 @@ public abstract class Unit : MonoBehaviour
         return Damageable;
     }
 
-    private void Awake()
+    protected virtual void Awake()
     {
         _life.Init(Damageable, this);
         _life.Died += Die;

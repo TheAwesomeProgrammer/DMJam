@@ -7,7 +7,8 @@ public class Bazooka : Weapon
 
     private PlayerMovement _playerMovement;
 
-
+    [SerializeField]
+    private float _upwardsModifier;
 
     [SerializeField]
     private float _recoilForce;
@@ -68,6 +69,7 @@ public class Bazooka : Weapon
         bulletData.UnitDealingDamage = _player;
         bulletData.ExplosionForce = _minExplosionForce + Mathf.Max(0, (_maxExplosionForce - _minExplosionForce) * chargeProcentAmount);
         bulletData.ExplosionRadius = _minExplosionRadius + Mathf.Max(0, (_maxExplosionRadius - _minExplosionRadius) * chargeProcentAmount);
+        bulletData.ExplosionUpwardsModifier = _upwardsModifier;
         spawnedBullet.Init(bulletData);
     }
 

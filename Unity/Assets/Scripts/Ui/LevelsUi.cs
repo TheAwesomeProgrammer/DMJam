@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 
 public class LevelsUi : MonoBehaviour
 {
@@ -23,10 +24,12 @@ public class LevelsUi : MonoBehaviour
     [SerializeField]
     private Transform _levelSectionParent;
 
+
     private void Start()
     {
         _levelSections = new List<LevelSection>();
         List<Level> levelsForSection = new List<Level>();
+        int levelSectionIndex = 0;
         foreach (var level in LevelManager.Instance.Levels)
         {
             levelsForSection.Add(level);
@@ -34,20 +37,22 @@ public class LevelsUi : MonoBehaviour
             {
                 LevelSection levelSection = Instantiate(_levelSectionPrefab, _levelSectionParent);
                 _levelSections.Add(levelSection);
-                levelSection.Init(levelsForSection);
+                levelSection.Init(levelsForSection, levelSectionIndex);
                 levelsForSection.Clear();
                 if (_isFirstLevelSelection)
                 {
                     levelSection.Select();
                 }
                 _isFirstLevelSelection = false;
+                levelSectionIndex++;
             }
         }
 
         if(levelsForSection.Count > 0)
         {
             LevelSection levelSection = Instantiate(_levelSectionPrefab, _levelSectionParent);
-            levelSection.Init(levelsForSection);
+            _levelSections.Add(levelSection);
+            levelSection.Init(levelsForSection, levelSectionIndex);
         }
     }
 
@@ -86,7 +91,7 @@ public class LevelsUi : MonoBehaviour
 
     private void MoveRight()
     {
-        if (_currentLevelSectionIndex < _levelSections.Count && _levelSections[_currentLevelSectionIndex + 1].IsUnlocked)
+        if (_currentLevelSectionIndex < _levelSections.Count && ((_currentLevelSectionIndex + 1 < _levelSections.Count && _levelSections[_currentLevelSectionIndex + 1].IsUnlocked) || _currentLevelSectionIndex + 1 > _levelSections.Count))
         {
             _currentLevelSectionIndex++;
         }

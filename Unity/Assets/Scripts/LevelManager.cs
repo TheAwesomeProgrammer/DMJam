@@ -35,7 +35,7 @@ public class LevelManager : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
         _currentLevel = _levels[_currentLevelIndex];
-        CompletedCurrentLevel();
+        _currentLevel.Unlock();
     }
 
     public bool HasLoadedLevel(string name)

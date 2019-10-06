@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class LevelSection : MonoBehaviour
 {
@@ -24,23 +25,29 @@ public class LevelSection : MonoBehaviour
     [SerializeField]
     private GameObject _bottomMarker;
 
+    [SerializeField]
+    private TextMeshProUGUI _title;
+
     public bool IsSelected { get; private set; }
     public bool IsUnlocked => _unlockedlevelUis.Count > 0;
     public bool IsBottomMarkerActive => _bottomMarker.activeSelf;
    
-    public void Init(IEnumerable<Level> levels)
+    public void Init(IEnumerable<Level> levels, int index)
     {
+        _title.text = "Stage " + (index + 1);
         _bottomMarker.SetActive(false);
         _levelUis = new List<LevelUi>();
         _unlockedlevelUis = new List<LevelUi>();
+
         foreach (var level in levels)
         {
             AddLevel(level);
         }
-        if (IsUnlocked)
+        if (IsUnlocked && IsSelected)
         {
             SelectMarker();
-        }        
+        }
+        _currentMarkerIndex = _unlockedlevelUis.Count + 1;
     }
 
     private void AddLevel(Level level)
@@ -132,6 +139,7 @@ public class LevelSection : MonoBehaviour
     public void DeSelect()
     {
         IsSelected = false;
+        _bottomMarker.SetActive(false);
         foreach (var levelUi in _unlockedlevelUis)
         {
             levelUi.Deselect();

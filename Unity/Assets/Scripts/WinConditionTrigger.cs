@@ -19,7 +19,6 @@ public class WinConditionTrigger : MonoBehaviour
     [SerializeField]
     private Sprite _deathSprite;
 
-
     private void Awake()
     {
         TriggerNotifier triggerNotifier = _triggerGo.AddComponent<TriggerNotifier>();
@@ -45,7 +44,7 @@ public class WinConditionTrigger : MonoBehaviour
 
     private void MoveToNextLevel()
     {
-        Game.Instance.CurrentLevelReached++;
-        SceneManager.LoadScene(_sceneToLoad.name);
+        LevelManager.Instance.CompletedCurrentLevel();
+        LevelManager.Instance.LoadHighestUnlockedLevel();
     }
 }

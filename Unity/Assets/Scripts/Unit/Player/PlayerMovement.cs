@@ -67,10 +67,10 @@ public class PlayerMovement : MonoBehaviour
         _rigidbody2D.AddForce(-shootDirection * recoilForce, ForceMode2D.Impulse);
     }
 
-    public void AddExplosionForce(float explosionForce, Vector2 explosionPositon, float explosionRadius)
+    public void AddExplosionForce(float explosionForce, Vector2 explosionPositon, float explosionRadius, float upwardsModifier)
     {
-        _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, 0);
-        _rigidbody2D.AddExplosionForce(explosionForce, explosionPositon, explosionRadius, 0, ForceMode2D.Impulse);
+        _rigidbody2D.velocity = new Vector2(0, 0);
+        _rigidbody2D.AddExplosionForce(explosionForce, explosionPositon, explosionRadius, upwardsModifier, ForceMode2D.Impulse);
     }
 
     private void Flip()

@@ -30,20 +30,9 @@ public class Game : MonoBehaviour
         }
     }
 
-    public int CurrentLevelReached
-    {
-        get
-        {
-            return PlayerPrefs.GetInt(nameof(CurrentLevelReached));
-        }
-        set
-        {
-            PlayerPrefs.SetInt(nameof(CurrentLevelReached), value);
-        }
-    }
-
     private void Awake()
     {
+        LeanTween.init(9999);
         _player.MetKilledBabyQuota += OnMetKilledBabyQuota;
         DontDestroyOnLoad(gameObject);
     }

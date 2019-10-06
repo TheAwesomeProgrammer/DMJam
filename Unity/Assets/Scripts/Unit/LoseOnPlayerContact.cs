@@ -19,10 +19,7 @@ public class LoseOnPlayerContact : MonoBehaviour
         if(hit.collider)
         {
             Player player = hit.collider.GetComponentInParent<Player>();
-            if (player.PlayerMovement.HasMovedUp)
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            }
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);            
         }
     }
 }

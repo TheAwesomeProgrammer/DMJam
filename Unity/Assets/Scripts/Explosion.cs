@@ -9,6 +9,7 @@ public class Explosion : MonoBehaviour
     private Unit _unitDealingDamage;
     private float _explosionForce;
     private float _explosionRadius;
+    private float _explosionUpwardsModifier;
 
     [SerializeField]
     private float _aliveTime;
@@ -36,7 +37,8 @@ public class Explosion : MonoBehaviour
 
     private List<UnitType> _typesCanApplyExplosionForceTo = new List<UnitType>()
     {
-        UnitType.Player
+        UnitType.Player,
+        UnitType.Block
     };
 
     private List<UnitType> _typesExplosionCanDamage = new List<UnitType>()
@@ -45,10 +47,11 @@ public class Explosion : MonoBehaviour
         UnitType.Baby
     };
 
-    public void Init(float explosionForce, float explosionRadius, Unit unitDealingDamage)
+    public void Init(float explosionForce, float explosionRadius, float explosionUpwardsModifier, Unit unitDealingDamage)
     {
         _explosionForce = explosionForce;
         _explosionRadius = explosionRadius;
+        _explosionUpwardsModifier = explosionUpwardsModifier;
         _unitDealingDamage = unitDealingDamage;
         _rootTransform.localScale = new Vector3(explosionRadius, explosionRadius);
         _circleCollider2D.enabled = true; 
@@ -79,7 +82,7 @@ public class Explosion : MonoBehaviour
         {
             UnitToApplyForceToEntered(unitType, unit);
         }
-        else if (_typesExplosionCanDamage.Contains(unitType))
+        if (_typesExplosionCanDamage.Contains(unitType))
         {
             UnitToApplyDamageToEntered(unitType, unit);
         }          
@@ -87,8 +90,16 @@ public class Explosion : MonoBehaviour
 
     private void UnitToApplyForceToEntered(UnitType unitType, Unit unit)
     {
-        Player player = unit as Player;
-        player.PlayerMovement.AddExplosionForce(_explosionForce, _bodyTransform.position, _explosionRadius);
+        if(unitType == UnitType.Player)
+        {
+            Player player = unit as Player;
+            player.PlayerMovement.AddExplosionForce(_explosionForce, _bodyTransform.position, _explosionRadius, _explosionUpwardsModifier);
+        }
+        else if(unitType == UnitType.Block)
+        {
+            BlockUnit blockUnit = unit as BlockUnit;
+            blockUnit.AddExplosionForce(_explosionForce, _bodyTransform.position, _explosionRadius, _explosionUpwardsModifier); 
+        }        
     }
 
     private void UnitToApplyDamageToEntered(UnitType unitType, Unit unit)

@@ -22,6 +22,12 @@ public class LevelUi : MonoBehaviour
     private Image _hardLevel;
 
     [SerializeField]
+    private Sprite _lockedSprite;
+
+    [SerializeField]
+    private Sprite _unlockedSprite;
+
+    [SerializeField]
     private GameObject _marker;
 
     [SerializeField]
@@ -56,12 +62,12 @@ public class LevelUi : MonoBehaviour
 
     private void Lock(Image image)
     {
-        image.color = Color.black;
+        image.sprite = _lockedSprite;
     }
 
     private void Unlock(Image image)
     {
-        image.color = Color.white;
+        image.sprite = _unlockedSprite;
     }
 
     public void SelectMarker()
