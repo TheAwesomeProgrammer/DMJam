@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class LevelsUi : MonoBehaviour
 {
-    private const string VERTICAL_AXIS_INPUT = "Horizontal";
+    private const string HORIZONTAL_AXIS_INPUT = "Horizontal";
 
     private bool _isFirstLevelSelection = true;
     private float _nextTimeCanSwitch;
@@ -52,17 +52,15 @@ public class LevelsUi : MonoBehaviour
 
     private void HandleLevelSectionSelection()
     {
-        float axisInput = Input.GetAxis(VERTICAL_AXIS_INPUT);
+        float axisInput = Input.GetAxis(HORIZONTAL_AXIS_INPUT);
         if (_nextTimeCanSwitch < Time.time)
         {
             if (axisInput > 0)
             {
-                MoveUp();
                 _nextTimeCanSwitch = Time.time + _timeBetweenEachSwitch;
             }
             if (axisInput < 0)
             {
-                MoveDown();
                 _nextTimeCanSwitch = Time.time + _timeBetweenEachSwitch;
             }
         }
