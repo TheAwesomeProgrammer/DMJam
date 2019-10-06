@@ -77,4 +77,16 @@ public class PlayerMovement : MonoBehaviour
     {        
         _graphicsTransform.localScale = new Vector3(_graphicsTransform.lossyScale.x * -1, _graphicsTransform.lossyScale.y);
     }
+
+    public void Activate()
+    {
+        enabled = true;
+        _rigidbody2D.isKinematic = false;
+    }
+
+    public void Deactivate()
+    {
+        enabled = false;
+        _rigidbody2D.isKinematic = true;
+    }
 }
