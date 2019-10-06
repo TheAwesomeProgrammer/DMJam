@@ -8,9 +8,6 @@ public class WinConditionTrigger : MonoBehaviour
     private float _delayBeforeSwitchingToNextLevel;
 
     [SerializeField]
-    private Object _sceneToLoad;
-
-    [SerializeField]
     private GameObject _triggerGo;
 
     [SerializeField]
@@ -31,15 +28,8 @@ public class WinConditionTrigger : MonoBehaviour
 
     private void UnitEntered(UnitType unitType, Unit unit)
     {
-        if(_sceneToLoad != null)
-        {
-            _spriteRenderer.sprite = _deathSprite;
-            LeanTween.delayedCall(_delayBeforeSwitchingToNextLevel, MoveToNextLevel);
-        }
-        else
-        {
-            Debug.LogError("Please select correct scene object");
-        }        
+        _spriteRenderer.sprite = _deathSprite;
+        LeanTween.delayedCall(_delayBeforeSwitchingToNextLevel, MoveToNextLevel);    
     }
 
     private void MoveToNextLevel()

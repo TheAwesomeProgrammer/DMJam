@@ -8,24 +8,24 @@ using Object = UnityEngine.Object;
 public class Level
 {
     [SerializeField]
-    private Object _level;
+    private string _levelName;
 
     [SerializeField]
-    private Object _hardModeLevel;
+    private string _hardModeLevelName;
 
     public bool IsUnlocked { get; private set; }
     public bool IsHardModeUnlocked { get; private set; }
     public bool HasBeenLoaded { get; private set; }
-    public string Name => _level.name;
+    public string Name => _levelName;
 
     public void Load()
     {
-        SceneManager.LoadScene(_level.name);
+        SceneManager.LoadScene(_levelName);
     }
 
     public void LoadHardLevel()
     {
-        SceneManager.LoadScene(_hardModeLevel.name);
+        SceneManager.LoadScene(_hardModeLevelName);
     }
 
     public void Unlock()

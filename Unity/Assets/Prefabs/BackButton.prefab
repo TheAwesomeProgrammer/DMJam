@@ -197,4 +197,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16e6d36c3b00e8c41b477e296839265b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneToLoad: {fileID: 102900000, guid: e69eedf264aa32d4ab80d41874c1a2c1, type: 3}
+  _sceneToLoad: MainMenu

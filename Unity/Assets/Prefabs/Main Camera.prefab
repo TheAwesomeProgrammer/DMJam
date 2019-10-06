@@ -114,4 +114,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5f980425d6ff134ca27fd5e1fffd3ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelSelectMenu: {fileID: 102900000, guid: d783f125466758a4fa458ca867ecd941, type: 3}
+  _levelSelectMenu: LevelSelect

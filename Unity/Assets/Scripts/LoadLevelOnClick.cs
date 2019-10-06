@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 public class LoadLevelOnClick : MonoBehaviour
 {
     [SerializeField]
-    private Object _sceneToLoad;
+    private string _sceneToLoad;
 
     public void OnMouseDown()
     {
-        SceneManager.LoadScene(_sceneToLoad.name);
+        SceneManager.LoadScene(_sceneToLoad);
     }
 
     private void Update()
