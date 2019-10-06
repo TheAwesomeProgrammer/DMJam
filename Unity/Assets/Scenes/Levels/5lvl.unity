@@ -8109,6 +8109,26 @@ PrefabInstance:
       propertyPath: _charger
       value: 
       objectReference: {fileID: 926606294}
+    - target: {fileID: 1614947681, guid: 76fcdb104c71a4e44a7a3b1abd62a65c, type: 3}
+      propertyPath: _minExplosionRadius
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1614947681, guid: 76fcdb104c71a4e44a7a3b1abd62a65c, type: 3}
+      propertyPath: _maxExplosionRadius
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1614947681, guid: 76fcdb104c71a4e44a7a3b1abd62a65c, type: 3}
+      propertyPath: _minExplosionForce
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 1614947681, guid: 76fcdb104c71a4e44a7a3b1abd62a65c, type: 3}
+      propertyPath: _maxExplosionForce
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 1614947681, guid: 76fcdb104c71a4e44a7a3b1abd62a65c, type: 3}
+      propertyPath: _recoilForce
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5696741462926111038, guid: 76fcdb104c71a4e44a7a3b1abd62a65c,
         type: 3}
       propertyPath: m_BackGroundColor.r
