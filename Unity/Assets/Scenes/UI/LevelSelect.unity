@@ -174,7 +174,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 0
+  m_ChildAlignment: 2
   m_Spacing: 20
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
@@ -194,7 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c4f0ffcf6b57f743ad54602ada19451, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timeBetweenEachSwitch: 0
+  _timeBetweenEachSwitch: 1
   _levelsInASection: 3
   _levelSectionPrefab: {fileID: 4456017855812316239, guid: f0064667153f1334bae263b82a760969,
     type: 3}
@@ -624,11 +624,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _levels:
   - _level: {fileID: 102900000, guid: f472cd6fcf9adc44983c67687aad9bd9, type: 3}
-    _hardModeLevel: {fileID: 102900000, guid: f472cd6fcf9adc44983c67687aad9bd9, type: 3}
-  - _level: {fileID: 102900000, guid: 9e01323ccc19bbc469bb48618d42ae3c, type: 3}
-    _hardModeLevel: {fileID: 102900000, guid: 9e01323ccc19bbc469bb48618d42ae3c, type: 3}
-  - _level: {fileID: 102900000, guid: 9e01323ccc19bbc469bb48618d42ae3c, type: 3}
-    _hardModeLevel: {fileID: 102900000, guid: 9e01323ccc19bbc469bb48618d42ae3c, type: 3}
+    _hardModeLevel: {fileID: 102900000, guid: cf669cba630c9e14db3b7c657db11496, type: 3}
+  - _level: {fileID: 102900000, guid: bc2334202ab4db445a51de58228e0e93, type: 3}
+    _hardModeLevel: {fileID: 102900000, guid: 865c306e2efc11a418d73ccb3f76b9e6, type: 3}
+  - _level: {fileID: 102900000, guid: 59cc210d76d9ecd4b9837b9fd6419a32, type: 3}
+    _hardModeLevel: {fileID: 102900000, guid: b9e0af6b2424cc24eab2806452407ea2, type: 3}
   - _level: {fileID: 102900000, guid: 9e01323ccc19bbc469bb48618d42ae3c, type: 3}
     _hardModeLevel: {fileID: 102900000, guid: 9e01323ccc19bbc469bb48618d42ae3c, type: 3}
   - _level: {fileID: 102900000, guid: 9e01323ccc19bbc469bb48618d42ae3c, type: 3}
@@ -812,6 +812,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.x
       value: 48.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 7649757684923296983, guid: 98c5b7308ec42e54a82fe64a1c03c77e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000005722046
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98c5b7308ec42e54a82fe64a1c03c77e, type: 3}

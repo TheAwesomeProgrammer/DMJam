@@ -8,6 +8,7 @@ public class LevelSection : MonoBehaviour
     private const string VERTICAL_AXIS_INPUT = "Vertical";
 
     private List<LevelUi> _levelUis;
+    private List<LevelUi> _unlockedlevelUis;
     private float _nextTimeCanSwitch;
     private int _currentMarkerIndex;
 
@@ -23,17 +24,23 @@ public class LevelSection : MonoBehaviour
     [SerializeField]
     private GameObject _bottomMarker;
 
-    public bool IsSelected { get; set; }
+    public bool IsSelected { get; private set; }
+    public bool IsUnlocked => _unlockedlevelUis.Count > 0;
+    public bool IsBottomMarkerActive => _bottomMarker.activeSelf;
    
     public void Init(IEnumerable<Level> levels)
     {
         _bottomMarker.SetActive(false);
         _levelUis = new List<LevelUi>();
+        _unlockedlevelUis = new List<LevelUi>();
         foreach (var level in levels)
         {
             AddLevel(level);
         }
-        Select();
+        if (IsUnlocked)
+        {
+            SelectMarker();
+        }        
     }
 
     private void AddLevel(Level level)
@@ -41,11 +48,15 @@ public class LevelSection : MonoBehaviour
         LevelUi levelUi = Instantiate(_levelUiPrefab, _levelUiParent);
         levelUi.UpdateUi(level);
         _levelUis.Add(levelUi);
+        if (level.IsUnlocked)
+        {
+            _unlockedlevelUis.Add(levelUi);
+        }
     }
 
     private void Update()
     {
-        if (IsSelected)
+        if (IsSelected && IsUnlocked)
         {
             HandleMarkerSelection();
         }
@@ -77,30 +88,53 @@ public class LevelSection : MonoBehaviour
             _currentMarkerIndex--;
         }
 
-        Select();
+        SelectMarker();
     }
 
     private void MoveDown()
     {
-        if (_currentMarkerIndex < _levelUis.Count)
+        if (_currentMarkerIndex < _unlockedlevelUis.Count)
         {
             _currentMarkerIndex++;
         }
-        if (_currentMarkerIndex >= _levelUis.Count)
+        if (_currentMarkerIndex >= _unlockedlevelUis.Count)
         {
-            _currentMarkerIndex = _levelUis.Count;
+            _currentMarkerIndex = _unlockedlevelUis.Count;          
+        }
+
+        SelectMarker();          
+    }
+
+    private void SelectMarker()
+    {
+        foreach(var levelUi in _unlockedlevelUis)
+        {
+            levelUi.Deselect();
+        }
+
+        if (_currentMarkerIndex >= _unlockedlevelUis.Count)
+        {
             _bottomMarker.SetActive(true);
-            EventSystem.current.SetSelectedGameObject(_bottomMarker);
         }
         else
         {
-            Select();
-        }       
+            _bottomMarker.SetActive(false);
+            _unlockedlevelUis[_currentMarkerIndex].SelectMarker();
+        }            
     }
 
-    private void Select()
+    public void Select()
     {
-        _bottomMarker.SetActive(false);
-        EventSystem.current.SetSelectedGameObject(_levelUis[_currentMarkerIndex].gameObject);
+        IsSelected = true;
+        SelectMarker();
+    }
+
+    public void DeSelect()
+    {
+        IsSelected = false;
+        foreach (var levelUi in _unlockedlevelUis)
+        {
+            levelUi.Deselect();
+        }
     }
 }
