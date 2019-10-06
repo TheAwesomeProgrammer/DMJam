@@ -15,6 +15,8 @@ public class Level
 
     public bool IsUnlocked { get; private set; }
     public bool IsHardModeUnlocked { get; private set; }
+    public bool HasBeenLoaded { get; private set; }
+    public string Name => _level.name;
 
     public void Load()
     {
@@ -34,5 +36,10 @@ public class Level
     public void UnlockHardMode()
     {
         IsHardModeUnlocked = true;
+    }
+
+    public void LoadedLevel()
+    {
+        HasBeenLoaded = true;
     }
 }

@@ -29,8 +29,28 @@ public class LevelManager : MonoBehaviour
 
     private void Awake()
     {
+        if(Instance != this && Instance == null)
+        {
+            Destroy(gameObject);
+        }
+        DontDestroyOnLoad(gameObject);
         _currentLevel = _levels[_currentLevelIndex];
         CompletedCurrentLevel();
+    }
+
+    public bool HasLoadedLevel(string name)
+    {
+        return GetLevelFromName(name).HasBeenLoaded;
+    }
+
+    public void LevelWasLoaded(string name)
+    {
+        GetLevelFromName(name).LoadedLevel();
+    }
+
+    private Level GetLevelFromName(string name)
+    {
+        return _levels.Find(item => item.Name == name);
     }
 
     public void CompletedCurrentLevel()

@@ -63,6 +63,6 @@ public class Game : MonoBehaviour
 
     public void Lost()
     {
-        SceneManager.LoadScene(_sceneToLoadOnLose.name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

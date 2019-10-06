@@ -18,6 +18,8 @@ public class CameraPlayerFollowMovement : MonoBehaviour
     [SerializeField]
     private Transform _bodyTransform;
 
+
+
     private void FixedUpdate()
     {
         Vector2 normalizedDistanceToPlayer = NormalizedDirectionToPlayer();
