@@ -32,10 +32,15 @@ public class LevelManager : MonoBehaviour
         if(Instance != this && Instance == null)
         {
             Destroy(gameObject);
+
         }
-        DontDestroyOnLoad(gameObject);
-        _currentLevel = _levels[_currentLevelIndex];
-        _currentLevel.Unlock();
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+            _currentLevel = _levels[_currentLevelIndex];
+            _currentLevel.Unlock();
+        }
+        
     }
 
     public bool HasLoadedLevel(string name)
@@ -76,7 +81,8 @@ public class LevelManager : MonoBehaviour
     public void LoadHighestUnlockedLevel()
     {
         Level highUnlockedLevel = _levels.FindLast(item => item.IsUnlocked);
-        highUnlockedLevel.Load();
+        _currentLevelIndex = _levels.FindIndex(item => item.Name == highUnlockedLevel.Name);
+        highUnlockedLevel.Load();       
     }
 
     private Level GetNextLevel()

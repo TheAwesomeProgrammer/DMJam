@@ -883,7 +883,6 @@ GameObject:
   - component: {fileID: 1050014226337765732}
   - component: {fileID: 1242195255516126811}
   - component: {fileID: -9152061074327856236}
-  - component: {fileID: 5680272766372523059}
   m_Layer: 0
   m_Name: Block
   m_TagString: Untagged
@@ -1068,22 +1067,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   _bodyTransform: {fileID: 1050014226337765729}
---- !u!114 &5680272766372523059
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1050014226337765731}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c1ee515a45fde0498cb4696990b6c37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _life:
-    _health: 1
-  _rootGo: {fileID: 1050014226337765731}
-  _collisionTransform: {fileID: 1050014226337765729}
 --- !u!1 &1367634030824832948
 GameObject:
   m_ObjectHideFlags: 0

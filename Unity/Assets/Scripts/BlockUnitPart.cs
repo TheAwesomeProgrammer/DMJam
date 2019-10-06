@@ -24,6 +24,11 @@ public class BlockUnitPart : MonoBehaviour
         _body.parent = null;
         _rigidbody2D.isKinematic = false;
         LeanTween.Destroy(gameObject, _aliveTime);
-        LeanTween.delayedCall(_fadeAfterTime, () => LeanTween.alpha(gameObject, 0, _aliveTime - _fadeAfterTime));
+        gameObject.LeanDelayedCall(_fadeAfterTime, () => LeanTween.alpha(gameObject, 0, _aliveTime - _fadeAfterTime));
+    }
+
+    private void OnDestroy()
+    {
+        LeanTween.cancel(gameObject);
     }
 }
