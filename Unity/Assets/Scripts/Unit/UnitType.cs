@@ -7,5 +7,6 @@ public enum UnitType
     Block,
     Baby,
     Bullet,
-    Ground
+    Ground,
+    NoExplosionGround
 }

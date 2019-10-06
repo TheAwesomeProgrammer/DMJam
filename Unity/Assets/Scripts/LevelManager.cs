@@ -27,8 +27,15 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    private void Awake()
+    {
+        _currentLevel = _levels[_currentLevelIndex];
+        CompletedCurrentLevel();
+    }
+
     public void CompletedCurrentLevel()
     {
+        _currentLevel.Unlock();
         _currentLevel.UnlockHardMode();
         Level nextLevel = GetNextLevel();
         nextLevel.Unlock();
